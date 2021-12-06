@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class UserRegistrationMain {
     UserRegistrationFunctionality regexUserRegistration = new UserRegistrationFunctionality();
+    TestSampleEmailIds testSampleEmail = new TestSampleEmailIds();
     Scanner scanner = new Scanner(System.in);
 
     //method to have a choice
@@ -13,6 +14,8 @@ public class UserRegistrationMain {
                     + "Enter 3 To Check EmailId\n"
                     + "Enter 4 To Check Mobile Number\n"
                     + "Enter 5 To Check password\n"
+                    + "Enter 6 To Test Valid Emails\n"
+                    + "Enter 7 To Test Invalid Emails\n"
                     + "Enter 0 To Exit");
             int choice = scanner.nextInt();
             switch (choice) {
@@ -30,6 +33,12 @@ public class UserRegistrationMain {
                     break;
                 case 5 :
                     regexUserRegistration.userPassword();
+                    break;
+                case 6 :
+                    testSampleEmail.testForValidEmails();
+                    break;
+                case 7 :
+                    testSampleEmail.testForNonValidEmails();
                     break;
                 case 0:
                     System.exit(0);
