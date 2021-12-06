@@ -1,23 +1,19 @@
 package com.bridgelabz;
 import java.util.Scanner;
 
-public class UserRegistrationMain {
-    UserRegistrationFunctionality regexUserRegistration = new UserRegistrationFunctionality();
+public class RegexUserMain {
+    // reference variable for  regexUserRegistration class
+    RegexUserRegistration regexUserRegistration = new RegexUserRegistration();
     Scanner scanner = new Scanner(System.in);
 
-    //method to have a choice
     public void choice() {
         while (true) {
             System.out.println("Enter 1 To Check First Name\n"
-                    + "Enter 2 To Check Second Name\n"
                     + "Enter 0 To Exit");
             int choice = scanner.nextInt();
             switch (choice) {
                 case 1 :
                     regexUserRegistration.userFirstName();
-                    break;
-                case 2 :
-                    regexUserRegistration.userLastName();
                     break;
                 case 0:
                     System.exit(0);
@@ -31,9 +27,8 @@ public class UserRegistrationMain {
 
     // main method
     public static void main(String[] args) {
-        System.out.println("\n Welcome to the User Registration program by Regex \n");
-        UserRegistrationMain regexUserMain = new UserRegistrationMain();
+        System.out.println("\n Welcome to the user Registration program by Regex \n");
+        RegexUserMain regexUserMain = new RegexUserMain();
         regexUserMain.choice();
-        regexUserMain.scanner.close();
     }
 }
