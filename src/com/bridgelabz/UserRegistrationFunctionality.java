@@ -17,4 +17,10 @@ public class UserRegistrationFunctionality {
         String lastName = scanner.next();
         validation.lastName(lastName);
     }
+    //method for email validation
+    public void userEmailId() {
+        System.out.println("Enter Your EmailId : ");
+        String emailId = scanner.next();
+        validation.emailId(emailId);
+    }
 }
