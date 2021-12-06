@@ -11,6 +11,7 @@ public class UserRegistrationMain {
             System.out.println("Enter 1 To Check First Name\n"
                     + "Enter 2 To Check Second Name\n"
                     + "Enter 3 To Check EmailId\n"
+                    + "Enter 4 To Check Mobile Number\n"
                     + "Enter 0 To Exit");
             int choice = scanner.nextInt();
             switch (choice) {
@@ -22,6 +23,9 @@ public class UserRegistrationMain {
                     break;
                 case 3 :
                     regexUserRegistration.userEmailId();
+                    break;
+                case 4 :
+                    regexUserRegistration.userMobileNumber();
                     break;
                 case 0:
                     System.exit(0);
